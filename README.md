@@ -6,8 +6,8 @@ This plugin was created in the context of a Bachelor's thesis at Brandenburg Uni
 
 ## Installing the Plugin
 1. Install <a href="https://www.elastic.co/de/downloads/past-releases/elasticsearch-7-10-2">Elasticsearch 7.10.2</a>. This plugin might not work for earlier or later releases or it needs to be adjusted.
-2. Download this plugin's ```.jar``` file and place it into a directory of your choice.
-3. From the ```bin``` directory within your Elasticsearch download, run ```elasticsearch-plugin install <path to the .jar file>```. 
+2. Download this plugin's ```.zip``` file and place it into a directory of your choice.
+3. From the ```bin``` directory within your Elasticsearch download, run ```elasticsearch-plugin install <path to the .zip file>```. 
 4. In a warning, you will be asked to give additional permissions. Confirm with ```y```. This plugin uses <a href="https://github.com/axkr/symja_android_library">Symja</a> which needs access to your file system to store temporary files. <br /><b>Note:</b> The installation of the plugin might fail if the confirmation happens too quickly. In that case, try repeating the process from step 3 on.
 5. Now you can run Elasticsearch: ```elasticsearch```. The plugin ```search-cqql``` will be loaded automatically after loading all the other, regular modules.
 
