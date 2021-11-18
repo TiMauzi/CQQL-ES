@@ -69,5 +69,5 @@ CQQL-ES as a whole is published under the GNU GENERAL PUBLIC LICENSE Version 3 (
 
 ## TODO
 * As soon as there is a stable release of Symja, the `gradle.build` file might download it directly instead of using a local distribution.
-* Other atomic queries (or queries that ought to be treated as such), e.g. `BooleanQuery`/`bool` need to be implemented in `CommutingQuantumQueryBuilder`.
+* Other atomic queries (or queries that ought to be treated as such), e.g. `BooleanQuery`/`bool` need to be implemented in `CommutingQuantumQueryBuilder` (this project uses a version from <a href="https://github.com/axkr/symja_android_library/commit/f509ac7f5836c2c2359b348f1542f9028537c1f6">2021/11/12</a>).
 * A new `Similarity` approach should be implemented.
