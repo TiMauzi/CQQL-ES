@@ -64,7 +64,7 @@ It is also possible to add weights (preferably between 0 and 1) to conditions:
 
 ## License
 CQQL-ES as a whole is published under the GNU GENERAL PUBLIC LICENSE Version 3 (GPL).
-* <a href="https://github.com/axkr/symja_android_library#license">Matheclipse (Symja) is published under the GNU GENERAL PUBLIC LICENSE Version 3 (GPL)</a> (this project uses a version from <a href="https://github.com/axkr/symja_android_library/commit/f509ac7f5836c2c2359b348f1542f9028537c1f6>2021/11/12</a>).
+* <a href="https://github.com/axkr/symja_android_library#license">Matheclipse (Symja) is published under the GNU GENERAL PUBLIC LICENSE Version 3 (GPL)</a>.
 * All other files are published under the Apache License, Version 2.0.
 
 ## TODO
