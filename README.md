@@ -4,6 +4,18 @@ A plugin for Elasticsearch, which implements the concept of information retrieva
 ## Concept
 This plugin was created in the context of a Bachelor's thesis at Brandenburg University of Technology Cottbus-Senftenberg (BTU). The idea of the quantum-based query language CQQL is invented in <i>I. Schmitt. "QQL: A DB&IR Query Language". In: The VLDB Journal 17.1 (Special Issue Paper) (2008), pp. 39–56. DOI: <a href="https://doi.org/10.1007/s00778-007-0070-1">10.1007/s00778-007-0070-1</a></i>. 
 
+The problem with e.g. `BooleanQuery` is that there are some flaws in the logical behavior from a theoretical perspective. Assume the following query in logical form:
+
+> ![\textrm{fox}\wedge\left(\textrm{eagle}\vee\textrm{crocodile}\right)](https://latex.codecogs.com/svg.latex?\textrm{fox}\wedge\left(\textrm{eagle}\vee\textrm{crocodile}\right))
+
+which should be equivalent to:
+
+> ![\left(\textrm{fox}\wedge\textrm{eagle}\right)\vee\left(\textrm{fox}\wedge\textrm{crocodile}\right)](https://latex.codecogs.com/svg.latex?\left(\textrm{fox}\wedge\textrm{eagle}\right)\vee\left(\textrm{fox}\wedge\textrm{crocodile}\right))
+
+due to distributivity law. However, this law is one of the rules which—generally—do not apply to Elasticsearch's standard `BooleanQuery`, where each of the queries above yields a different result.
+
+The `CommutingQuantumQuery` provided by CQQL-ES fixes inconsistencies like these by first transforming all input queries into equivalent representations according to the <a href="https://en.wikipedia.org/wiki/Boolean_algebra_(structure)#Definition">definition of Boolean Algebras</a>. Thus, logically equivalent queries actually result in the same output.
+
 ## Installing the Plugin
 1. Install <a href="https://www.elastic.co/de/downloads/past-releases/elasticsearch-7-10-2">Elasticsearch 7.10.2</a>. This plugin might not work for earlier or later releases or it needs to be adjusted.
 2. Download this plugin's ```.zip``` file and place it into a directory of your choice.
